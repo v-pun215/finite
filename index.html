@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🍎 Finite</div>
+            <div class="tagline">Install multiple Mac apps at once, hassle-free</div>
+        </div>
+
+        <div class="main-content">
+            <div class="instructions">
+                Select the apps you want to install and click "Get Installer". We'll create a custom installer that downloads and installs everything automatically.
+            </div>  
+
+            <div class="app-grid">
+                <div class="category">
+                    <h3>🌐 Web Browsers</h3>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">G</div>
+                        <div class="app-info">
+                            <div class="app-name">Google Chrome</div>
+                            <div class="app-description">Fast, secure web browser</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">F</div>
+                        <div class="app-info">
+                            <div class="app-name">Firefox</div>
+                            <div class="app-description">Privacy-focused browser</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">E</div>
+                        <div class="app-info">
+                            <div class="app-name">Microsoft Edge</div>
+                            <div class="app-description">Modern web browser</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>💼 Productivity</h3>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">O</div>
+                        <div class="app-info">
+                            <div class="app-name">Microsoft Office</div>
+                            <div class="app-description">Word, Excel, PowerPoint suite</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">N</div>
+                        <div class="app-info">
+                            <div class="app-name">Notion</div>
+                            <div class="app-description">All-in-one workspace</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">S</div>
+                        <div class="app-info">
+                            <div class="app-name">Slack</div>
+                            <div class="app-description">Team communication</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>💻 Development</h3>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">V</div>
+                        <div class="app-info">
+                            <div class="app-name">VS Code</div>
+                            <div class="app-description">Code editor by Microsoft</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">G</div>
+                        <div class="app-info">
+                            <div class="app-name">GitHub Desktop</div>
+                            <div class="app-description">Git repository management</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">D</div>
+                        <div class="app-info">
+                            <div class="app-name">Docker Desktop</div>
+                            <div class="app-description">Containerization platform</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>🎨 Creative</h3>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">A</div>
+                        <div class="app-info">
+                            <div class="app-name">Adobe Creative Cloud</div>
+                            <div class="app-description">Photoshop, etc.</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">F</div>
+                        <div class="app-info">
+                            <div class="app-name">Figma</div>
+                            <div class="app-description">Design and prototyping</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">S</div>
+                        <div class="app-info">
+                            <div class="app-name">Sketch</div>
+                            <div class="app-description">Digital design toolkit</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>🛠️ Utilities</h3>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">Z</div>
+                        <div class="app-info">
+                            <div class="app-name">The Unarchiver</div>
+                            <div class="app-description">Archive file extraction</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">C</div>
+                        <div class="app-info">
+                            <div class="app-name">CleanMyMac X</div>
+                            <div class="app-description">System optimization</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">R</div>
+                        <div class="app-info">
+                            <div class="app-name">Rectangle</div>
+                            <div class="app-description">Window management</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>🎵 Media</h3>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">S</div>
+                        <div class="app-info">
+                            <div class="app-name">Spotify</div>
+                            <div class="app-description">Music streaming</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">V</div>
+                        <div class="app-info">
+                            <div class="app-name">VLC Media Player</div>
+                            <div class="app-description">Universal media player</div>
+                        </div>
+                    </div>
+                    <div class="app-item" onclick="toggleApp(this)">
+                        <input type="checkbox" class="app-checkbox">
+                        <div class="app-icon">H</div>
+                        <div class="app-info">
+                            <div class="app-name">HandBrake</div>
+                            <div class="app-description">Video transcoder</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="category">
+    <h3>🎮 Gaming</h3>
+    <div class="app-item" onclick="toggleApp(this)">
+        <input type="checkbox" class="app-checkbox">
+        <div class="app-icon">S</div>
+        <div class="app-info">
+            <div class="app-name">Steam</div>
+            <div class="app-description">Popular game platform</div>
+        </div>
+    </div>
+    <div class="app-item" onclick="toggleApp(this)">
+        <input type="checkbox" class="app-checkbox">
+        <div class="app-icon">L</div>
+        <div class="app-info">
+            <div class="app-name">Lutris</div>
+            <div class="app-description">Open gaming platform</div>
+        </div>
+    </div>
+    <div class="app-item" onclick="toggleApp(this)">
+        <input type="checkbox" class="app-checkbox">
+        <div class="app-icon">O</div>
+        <div class="app-info">
+            <div class="app-name">OpenEmu</div>
+            <div class="app-description">Game emulator for macOS</div>
+        </div>
+    </div>
+</div>
+
+            <div class="category">
+                <h3>🔒 Security & Privacy</h3>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">M</div>
+                    <div class="app-info">
+                        <div class="app-name">Malwarebytes</div>
+                        <div class="app-description">Malware scanner and remover</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">L</div>
+                    <div class="app-info">
+                        <div class="app-name">Little Snitch</div>
+                        <div class="app-description">Network monitor & firewall</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">K</div>
+                    <div class="app-info">
+                        <div class="app-name">KeePassXC</div>
+                        <div class="app-description">Password manager</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>☁️ Cloud & Backup</h3>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">D</div>
+                    <div class="app-info">
+                        <div class="app-name">Dropbox</div>
+                        <div class="app-description">Cloud file storage</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">G</div>
+                    <div class="app-info">
+                        <div class="app-name">Google Drive</div>
+                        <div class="app-description">Google's cloud storage</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">S</div>
+                    <div class="app-info">
+                        <div class="app-name">Syncthing</div>
+                        <div class="app-description">Open-source file sync</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+    <h3>📦 Runtimes & Languages</h3>
+    <div class="app-item" onclick="toggleApp(this)">
+        <input type="checkbox" class="app-checkbox">
+        <div class="app-icon">P</div>
+        <div class="app-info">
+            <div class="app-name">Python</div>
+            <div class="app-description">Popular language</div>
+        </div>
+    </div>
+    <div class="app-item" onclick="toggleApp(this)">
+        <input type="checkbox" class="app-checkbox">
+        <div class="app-icon">J</div>
+        <div class="app-info">
+            <div class="app-name">Java</div>
+            <div class="app-description">Java runtime environment</div>
+        </div>
+    </div>
+    <div class="app-item" onclick="toggleApp(this)">
+        <input type="checkbox" class="app-checkbox">
+        <div class="app-icon">G</div>
+        <div class="app-info">
+            <div class="app-name">Go</div>
+            <div class="app-description">Modern compiled language</div>
+        </div>
+    </div>
+</div>
+
+            <div class="category">
+                <h3>📡 Communication</h3>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">D</div>
+                    <div class="app-info">
+                        <div class="app-name">Discord</div>
+                        <div class="app-description">Voice & text chat</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">T</div>
+                    <div class="app-info">
+                        <div class="app-name">Telegram</div>
+                        <div class="app-description">Messaging app</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">Z</div>
+                    <div class="app-info">
+                        <div class="app-name">Zoom</div>
+                        <div class="app-description">Video conferencing</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>🧰 System Tools</h3>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">A</div>
+                    <div class="app-info">
+                        <div class="app-name">Alfred</div>
+                        <div class="app-description">Productivity launcher</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">I</div>
+                    <div class="app-info">
+                        <div class="app-name">iStat Menus</div>
+                        <div class="app-description">System monitor</div>
+                    </div>
+                </div>
+                <div class="app-item" onclick="toggleApp(this)">
+                    <input type="checkbox" class="app-checkbox">
+                    <div class="app-icon">B</div>
+                    <div class="app-info">
+                        <div class="app-name">Bartender</div>
+                        <div class="app-description">Menu bar organizer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="download-section">
+                <div class="selected-count" id="selectedCount">No apps selected</div>
+                <button class="download-btn" id="downloadBtn" onclick="generateInstaller()" disabled>
+                    Get Installer
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made by <a class="footer-link" href="https://github.com/v-pun215">v-pun215.</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
